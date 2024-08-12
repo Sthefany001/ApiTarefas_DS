@@ -53,5 +53,19 @@ namespace ApiTarefas.Controllers
 
             return Ok(tarefa);
         }
+
+        [HttpPost]
+        public IActionResult Post([FromBody] Tarefa item)
+        {
+            var tarefa = new Tarefa();
+
+            tarefa.Id = item.Id;
+            tarefa.Descricao = item.Descricao;
+            tarefa.Feito = item.Feito;
+
+            listaTarefas.Add(tarefa);
+
+            return StatusCode(StatusCodes.Status201Created, tarefa);
+        }
     }
 }
