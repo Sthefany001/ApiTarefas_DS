@@ -103,6 +103,9 @@ namespace ApiTarefas.Controllers
 
             veiculo.Marca = veiculo.Modelo;
             veiculo.Modelo = veiculo.Modelo;
+            veiculo.AnoFab = veiculo.AnoFab;
+            veiculo.AnoModelo = veiculo.AnoFab;
+            veiculo.Placa = veiculo.Placa;
 
             return Ok(veiculo);
         }
