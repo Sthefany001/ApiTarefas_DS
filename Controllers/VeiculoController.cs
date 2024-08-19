@@ -62,7 +62,7 @@ namespace ApiTarefas.Controllers
         }
 
         [HttpGet("{placa}")]
-        public IActionResult GetById(string item)
+        public IActionResult GetById(string placa)
         {
             var veiculo = listaVeiculos.Where(item => item.Placa == placa).FirstOrDefault(); 
 
@@ -108,7 +108,7 @@ namespace ApiTarefas.Controllers
         }
 
         [HttpDelete("{placa}")]
-        public IActionResult Delete(string item)
+        public IActionResult Delete(string placa)
         {
             var veiculo = listaVeiculos.Where(item => item.Placa == placa).FirstOrDefault();/*fazendo busca da tarefa*/
 
